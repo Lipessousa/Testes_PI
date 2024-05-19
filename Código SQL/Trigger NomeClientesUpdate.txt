@@ -1,4 +1,0 @@
-drop trigger if exists NomeClientesUpdate;
-create trigger NomeClientesUpdate before update on Cliente
-for each row set
-new.nomeCompleto = concat(new.Nome, ' ', new.Sobrenome);

@@ -1,5 +1,0 @@
-drop trigger if exists NomeCliente;
-create trigger NomeCliente before insert on Cliente
-for each row set
-new.NomeCompleto = concat(new.Nome, ' ', new.Sobrenome);
-
